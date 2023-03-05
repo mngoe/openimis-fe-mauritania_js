@@ -1,5 +1,5 @@
 import messages_en from "./translations/en.json";
-import CsuActivitiesReport from "./reports/CsuActivitiesReport";
+import MauritaniaCardReport from "./reports/MauritaniaCardReport";
 
 
 const DEFAULT_CONFIG = {
@@ -8,18 +8,16 @@ const DEFAULT_CONFIG = {
   ],
   "reports": [
     {
-      key: "invoice_fosa_csu",
-      component: CsuActivitiesReport,
-      isValid: (values) => values.dateFrom && values.dateTo,
+      key: "beneficiary_card_mauritania",
+      component: MauritaniaCardReport,
+      isValid: () => true,
       getParams: (values) => ({
-        date_from: values.dateFrom,
-        date_to: values.dateTo,
         hflocation: values.hflocation?.code ? values.hflocation.code : 0
       })
     },
   ],
 }
 
-export const CsuModule = (cfg) => {
+export const MauritaniaModule = (cfg) => {
   return { ...DEFAULT_CONFIG, ...cfg };
 }
