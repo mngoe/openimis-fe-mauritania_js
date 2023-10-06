@@ -1,6 +1,7 @@
 import { Grid } from "@material-ui/core";
 import { PublishedComponent } from "@openimis/fe-core";
 import React from "react";
+import { useSelector } from "react-redux";
 
 const MauritaniaInvoiceReport = (props) => {
     const { values, setValues } = props;
