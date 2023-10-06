@@ -1,4 +1,6 @@
 {
     "csu.dateFrom":"From",
-    "csu.dateTo":"To"
+    "csu.dateTo":"To",
+    "mauritania.InvoiceMauritaniaReport.dateFrom": "Date From",
+    "mauritania.InvoiceMauritaniaReport.dateTo": "Date To"
 }

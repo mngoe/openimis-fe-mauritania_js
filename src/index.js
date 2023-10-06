@@ -1,5 +1,6 @@
 import messages_en from "./translations/en.json";
 import MauritaniaCardReport from "./reports/MauritaniaCardReport";
+import MauritaniaInvoiceReport from "./reports/MauritaniaInvoiceReport";
 
 
 const DEFAULT_CONFIG = {
@@ -13,6 +14,17 @@ const DEFAULT_CONFIG = {
       isValid: () => true,
       getParams: (values) => ({
         hflocation: values.hflocation?.code ? values.hflocation.code : 0
+      })
+    },
+    {
+      key: "invoice_mauritania",
+      component: MauritaniaInvoiceReport,
+      isValid: () => true,
+      getParams: (values) => ({
+        locationId: decodeId(values.location.id),
+        hflocation: values.hflocation?.code ? values.hflocation.code : 0,
+        dateFrom: values.dateFrom,
+        dateTo: values.dateTo,
       })
     },
   ],
