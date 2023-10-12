@@ -36,6 +36,7 @@ const MauritaniaInvoiceReport = (props) => {
                             hflocation,
                         })
                     }
+                    required
                     value={userHealthFacility?.code ? userHealthFacility.code : values.hflocation}
                 />
             </Grid>
