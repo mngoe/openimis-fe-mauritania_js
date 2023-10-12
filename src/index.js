@@ -1,6 +1,7 @@
 import messages_en from "./translations/en.json";
 import MauritaniaCardReport from "./reports/MauritaniaCardReport";
 import MauritaniaInvoiceReport from "./reports/MauritaniaInvoiceReport";
+import { decodeId } from "@openimis/fe-core";
 
 
 const DEFAULT_CONFIG = {

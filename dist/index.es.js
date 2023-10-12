@@ -1,14 +1,14 @@
 import _defineProperty from '@babel/runtime/helpers/defineProperty';
 import { Grid } from '@material-ui/core';
-import { PublishedComponent } from '@openimis/fe-core';
+import { PublishedComponent, decodeId } from '@openimis/fe-core';
 import React from 'react';
-import { useSelector as useSelector$1 } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 var messages_en = {
 	"csu.dateFrom": "From",
 	"csu.dateTo": "To",
-	"mauritania.invoiceMauritaniaReport.dateFrom": "Date From",
-	"mauritania.invoiceMauritaniaReport.dateTo": "Date To"
+	"mauritania.InvoiceMauritaniaReport.dateFrom": "Date From",
+	"mauritania.InvoiceMauritaniaReport.dateTo": "Date To"
 };
 
 function ownKeys$2(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -16,7 +16,7 @@ function _objectSpread$2(target) { for (var i = 1; i < arguments.length; i++) { 
 var MauritaniaCardReport = function MauritaniaCardReport(props) {
   var values = props.values,
     setValues = props.setValues;
-  var userHealthFacility = useSelector$1(function (state) {
+  var userHealthFacility = useSelector(function (state) {
     return state.loc.userHealthFacilityFullPath;
   });
   if (userHealthFacility !== null && userHealthFacility !== void 0 && userHealthFacility.code) {

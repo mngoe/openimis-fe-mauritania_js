@@ -16,8 +16,8 @@ var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var messages_en = {
 	"csu.dateFrom": "From",
 	"csu.dateTo": "To",
-	"mauritania.invoiceMauritaniaReport.dateFrom": "Date From",
-	"mauritania.invoiceMauritaniaReport.dateTo": "Date To"
+	"mauritania.InvoiceMauritaniaReport.dateFrom": "Date From",
+	"mauritania.InvoiceMauritaniaReport.dateTo": "Date To"
 };
 
 function ownKeys$2(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -54,7 +54,7 @@ function _objectSpread$1(target) { for (var i = 1; i < arguments.length; i++) { 
 var MauritaniaInvoiceReport = function MauritaniaInvoiceReport(props) {
   var values = props.values,
     setValues = props.setValues;
-  var userHealthFacility = useSelector(function (state) {
+  var userHealthFacility = reactRedux.useSelector(function (state) {
     return state.loc.userHealthFacilityFullPath;
   });
   if (userHealthFacility !== null && userHealthFacility !== void 0 && userHealthFacility.code) {
@@ -144,7 +144,7 @@ var DEFAULT_CONFIG = {
     getParams: function getParams(values) {
       var _values$hflocation2;
       return {
-        locationId: decodeId(values.location.id),
+        locationId: feCore.decodeId(values.location.id),
         hflocation: (_values$hflocation2 = values.hflocation) !== null && _values$hflocation2 !== void 0 && _values$hflocation2.code ? values.hflocation.code : 0,
         dateFrom: values.dateFrom,
         dateTo: values.dateTo
