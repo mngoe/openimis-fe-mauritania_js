@@ -1,5 +1,5 @@
 import { Grid } from "@material-ui/core";
-import { PublishedComponent } from "@openimis/fe-core";
+import { PublishedComponent, TextInput } from "@openimis/fe-core";
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -60,6 +60,17 @@ const MauritaniaInvoiceReport = (props) => {
                     onChange={(dateTo) => setValues({ ...values, dateTo })}
                 />
             </Grid>
+            <Grid item>
+                <TextInput
+                    pubRef="core.TextInput"
+                    value={values.responsible}
+                    module="mauritania"
+                    required
+                    label="InvoiceMauritaniaReport.Responsable"
+                    onChange={(responsible) => setValues({ ...values, responsible })}
+                />
+            </Grid>
+
         </Grid>
     );
 

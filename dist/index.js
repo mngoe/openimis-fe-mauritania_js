@@ -17,7 +17,8 @@ var messages_en = {
 	"csu.dateFrom": "From",
 	"csu.dateTo": "To",
 	"mauritania.InvoiceMauritaniaReport.dateFrom": "Date From",
-	"mauritania.InvoiceMauritaniaReport.dateTo": "Date To"
+	"mauritania.InvoiceMauritaniaReport.dateTo": "Date To",
+	"mauritania.InvoiceMauritaniaReport.Responsable": "Responsible"
 };
 
 function ownKeys$2(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -86,6 +87,7 @@ var MauritaniaInvoiceReport = function MauritaniaInvoiceReport(props) {
         hflocation: hflocation
       }));
     },
+    required: true,
     value: userHealthFacility !== null && userHealthFacility !== void 0 && userHealthFacility.code ? userHealthFacility.code : values.hflocation
   })), /*#__PURE__*/React__default["default"].createElement(core.Grid, {
     item: true
@@ -113,6 +115,19 @@ var MauritaniaInvoiceReport = function MauritaniaInvoiceReport(props) {
         dateTo: dateTo
       }));
     }
+  })), /*#__PURE__*/React__default["default"].createElement(core.Grid, {
+    item: true
+  }, /*#__PURE__*/React__default["default"].createElement(feCore.TextInput, {
+    pubRef: "core.TextInput",
+    value: values.responsible,
+    module: "mauritania",
+    required: true,
+    label: "InvoiceMauritaniaReport.Responsable",
+    onChange: function onChange(responsible) {
+      return setValues(_objectSpread$1(_objectSpread$1({}, values), {}, {
+        responsible: responsible
+      }));
+    }
   })));
 };
 
@@ -138,8 +153,8 @@ var DEFAULT_CONFIG = {
   }, {
     key: "invoice_mauritania",
     component: MauritaniaInvoiceReport,
-    isValid: function isValid() {
-      return true;
+    isValid: function isValid(values) {
+      return values.location && values.hflocation && values.dateFrom && values.dateTo && values.responsible;
     },
     getParams: function getParams(values) {
       var _values$hflocation2;
@@ -147,7 +162,8 @@ var DEFAULT_CONFIG = {
         locationId: feCore.decodeId(values.location.id),
         hflocation: (_values$hflocation2 = values.hflocation) !== null && _values$hflocation2 !== void 0 && _values$hflocation2.code ? values.hflocation.code : 0,
         dateFrom: values.dateFrom,
-        dateTo: values.dateTo
+        dateTo: values.dateTo,
+        responsible: values.responsible
       };
     }
   }]

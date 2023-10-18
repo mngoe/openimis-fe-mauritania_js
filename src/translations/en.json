@@ -2,5 +2,6 @@
     "csu.dateFrom":"From",
     "csu.dateTo":"To",
     "mauritania.InvoiceMauritaniaReport.dateFrom": "Date From",
-    "mauritania.InvoiceMauritaniaReport.dateTo": "Date To"
+    "mauritania.InvoiceMauritaniaReport.dateTo": "Date To",
+    "mauritania.InvoiceMauritaniaReport.Responsable": "Responsible"
 }
