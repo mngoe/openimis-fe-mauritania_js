@@ -77,6 +77,7 @@ var MauritaniaInvoiceReport = function MauritaniaInvoiceReport(props) {
         hflocation: hflocation
       }));
     },
+    required: true,
     value: userHealthFacility !== null && userHealthFacility !== void 0 && userHealthFacility.code ? userHealthFacility.code : values.hflocation
   })), /*#__PURE__*/React.createElement(Grid, {
     item: true
@@ -129,8 +130,8 @@ var DEFAULT_CONFIG = {
   }, {
     key: "invoice_mauritania",
     component: MauritaniaInvoiceReport,
-    isValid: function isValid() {
-      return true;
+    isValid: function isValid(values) {
+      return values.location && values.hflocation && values.dateFrom && values.dateTo;
     },
     getParams: function getParams(values) {
       var _values$hflocation2;
