@@ -22,7 +22,6 @@ const DEFAULT_CONFIG = {
       component: MauritaniaInvoiceReport,
       isValid: (values) => values.location && values.hflocation && values.dateFrom && values.dateTo,
       getParams: (values) => ({
-        locationId: decodeId(values.location.id),
         hflocation: values.hflocation?.code ? values.hflocation.code : 0,
         dateFrom: values.dateFrom,
         dateTo: values.dateTo,
@@ -33,7 +32,6 @@ const DEFAULT_CONFIG = {
       component: MauritaniaInvoiceReport,
       isValid: (values) => values.location && values.hflocation && values.dateFrom && values.dateTo,
       getParams: (values) => ({
-        locationId: decodeId(values.location.id),
         hflocation: values.hflocation?.code ? values.hflocation.code : 0,
         dateFrom: values.dateFrom,
         dateTo: values.dateTo,

@@ -10,23 +10,8 @@ const MauritaniaInvoiceReport = (props) => {
     if (userHealthFacility?.code) {
         values.hflocation = userHealthFacility
     };
-    console.log(values);
     return (
         <Grid container direction="column" spacing={1}>
-            <Grid item>
-                <PublishedComponent
-                    pubRef="location.LocationPicker"
-                    onChange={(location) =>
-                        setValues({
-                            ...values,
-                            location,
-                        })
-                    }
-                    required
-                    value={values.location}
-                    locationLevel={2}
-                />
-            </Grid>
             <Grid item>
                 <PublishedComponent
                     pubRef="location.HealthFacilityPicker"
