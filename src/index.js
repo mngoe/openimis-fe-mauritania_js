@@ -20,7 +20,7 @@ const DEFAULT_CONFIG = {
     {
       key: "invoice_mauritania",
       component: MauritaniaInvoiceReport,
-      isValid: (values) => values.location && values.hflocation && values.dateFrom && values.dateTo,
+      isValid: (values) => values.hflocation && values.dateFrom && values.dateTo,
       getParams: (values) => ({
         hflocation: values.hflocation?.code ? values.hflocation.code : 0,
         dateFrom: values.dateFrom,
@@ -30,7 +30,7 @@ const DEFAULT_CONFIG = {
     {
       key: "invoice_mauritania_payment",
       component: MauritaniaInvoiceReport,
-      isValid: (values) => values.location && values.hflocation && values.dateFrom && values.dateTo,
+      isValid: (values) => values.hflocation && values.dateFrom && values.dateTo,
       getParams: (values) => ({
         hflocation: values.hflocation?.code ? values.hflocation.code : 0,
         dateFrom: values.dateFrom,
